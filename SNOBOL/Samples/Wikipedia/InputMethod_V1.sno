@@ -1,0 +1,10 @@
+          OUTPUT = "This program will ask you for personal names"
+          OUTPUT = "until you press return without giving it one"
+          NameCount = 0                                            :(GETINPUT)
+AGAIN     NameCount = NameCount + 1
+          OUTPUT = "Name " NameCount ": " PersonalName
+GETINPUT  OUTPUT = "Please give me name " NameCount + 1 
+          PersonalName = INPUT
+          PersonalName LEN(1)                                      :S(AGAIN)
+          OUTPUT = "Finished. " NameCount " names requested."
+END
